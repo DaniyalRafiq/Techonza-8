@@ -118,14 +118,20 @@ $(document).ready(function () {
 
 
     
-  var swiper = new Swiper(".hero_card_main_slider", {
+
+  var swiper = new Swiper(".hero_sub_card_main", {
     slidesPerView: "auto",
     spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+      delay: 5000, // Delay between slides in milliseconds
+      disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+    },
   });
+
   // Initialize Swiper instances
   var swiper = new Swiper(".cate_home_content", {
     slidesPerView: "auto",
@@ -146,7 +152,13 @@ $(document).ready(function () {
     },
   });
 
-
-  
+  var swiper = new Swiper(".latest_news_wrapper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next.latest_news_btn_next",
+      prevEl: ".swiper-button-prev.latest_news_btn_prev",
+    },
+  });
 
 });
